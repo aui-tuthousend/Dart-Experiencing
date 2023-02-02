@@ -10,4 +10,16 @@ String? lastname(String fullname) {
 void main() {
   print(lastname('hafis'));
   print(lastname('hafis rehan'));
+
+  //assertion operator '!' fungsi = untuk mempromosikan nullable ekspresi ke non nullabe ekspresi
+  //example 1**
+  //disini variabel value bersifat nullable
+  int? value = 42;
+  //dan variabel value2 bersifat non nullable (karena pendeklarasian tipe data
+  // tidak diakhiri dengan tanda tanya.
+  int value2 = value!;
+
+  //example 2** (menggunakan fungsi diatas)
+  String last = lastname('muh hafis rehan')!; //menggunakan assertion & lebih prefer ini
+  String? last2 = lastname('muh hafis rehan'); //tidak menggunakan
 }
