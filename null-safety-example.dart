@@ -1,3 +1,11 @@
+//membuat non-nullvariabel di dalam class
+class karyawan {
+  //make a constructor first
+  karyawan(this.nama);
+  String nama;
+}
+
+
 String? lastname(String fullname) {
   //"final" berfungsi sperti "const"
   //fullname.split(' ') bermakna jika ada spasi maka akan dihitung kata kedua
@@ -7,9 +15,38 @@ String? lastname(String fullname) {
   return komponen.length > 1 ? komponen.last : null;
 }
 
+//mengecheck apakah suatu variable bersifat null / nullable
+int absoluteValue(int? value) {
+  if (value == null) {
+    return 0;
+    //atau kita bisa menggunakan
+    // throw Exception();
+  }
+  //dan setelah pengecekan ini maka variable value yang awalnya nullable menjadi non-nullable
+  return value.abs();
+}
+
+//contoh lain non-nullable
+int sign(int x) {
+  int result;
+  if (x>=0){
+    result = 1;
+  }
+  else{
+    result = -1;
+  }
+  print(result);
+  return result;
+}
+
 void main() {
   print(lastname('hafis'));
   print(lastname('hafis rehan'));
+
+  int a = sign(10);
+
+  karyawan gedung1 = new karyawan('ruka');
+  print(gedung1.nama);
 
   //assertion operator '!' fungsi = untuk mempromosikan nullable ekspresi ke non nullabe ekspresi
   //example 1**
@@ -22,4 +59,5 @@ void main() {
   //example 2** (menggunakan fungsi diatas)
   String last = lastname('muh hafis rehan')!; //menggunakan assertion & lebih prefer ini
   String? last2 = lastname('muh hafis rehan'); //tidak menggunakan
+
 }
