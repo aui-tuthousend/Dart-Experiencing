@@ -45,7 +45,7 @@ void main() {
 
   int a = sign(10);
 
-  karyawan gedung1 = new karyawan('ruka');
+  karyawan gedung1 = new karyawan('haruki');
   print(gedung1.nama);
 
   //assertion operator '!' fungsi = untuk mempromosikan nullable ekspresi ke non nullabe ekspresi
