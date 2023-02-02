@@ -6,16 +6,12 @@ void main(List<String> arguments) {
 
   print("anda membeli $nama");
 
-  // if (s != null){
-  //   int nilai = int.parse(s);
-  }
-
-  //input data melalui keyboard
-  // string tInput = stdin.readLineSync();
-
-  //mengkonversi tipe data string ke integer
-  // int nilai = 80;
-
-  //if statement
+  //input integer value
+  print("Enter your favourite number:");
+  //input integer proses
+  int n = int.parse(stdin.readLineSync()!);
+  // Here ? and ! are for null safety
+  print("Your favourite number is $n");
 
 
+}
