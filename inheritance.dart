@@ -13,20 +13,12 @@ abstract class kocag{
 }
 
 class acaraTV implements kocag {
-  String nama;
-  @override
-  void laughing() {
-    print("sketsa kuwi kocag gaming asuh");
-  }
-
-}
-
-class badut extends person implements kocag {
-  badut(super.nama, super.suku);
+  String nama, domisili;
+  acaraTV(this.nama, this.domisili);
 
   @override
   void laughing() {
-    print("beliau ini kocag gamyng");
+    print("program TV $nama kuwi kocag gaming asuh");
   }
 
 }
@@ -37,12 +29,12 @@ class person implements animal {
 
   @override
   void eating() {
-    print("person eating fish");
+    print("$nama eating fish");
   }
 
   @override
   void walking() {
-    print("person walking noises");
+    print("$nama walking noises");
   }
 
   @override
@@ -50,9 +42,29 @@ class person implements animal {
   String toString() => "nama lengkap: $nama, dari suku: $suku";
 }
 
+class badut extends person implements kocag {
+  badut(super.nama, super.suku);
+
+  @override
+  void laughing() {
+    print("beliau ini kocag gamyng");
+  }
+
+  @override
+  String toString() => "nama badut: $nama, asal suku: $suku";
+
+}
+/////////////////////////////////////////////////////////////////
 void main(List<String> arguments) {
 
   var wang = new person("wang chun yu", "sunda");
   //meng output semua objek yang dimiliki dari kelas tsb
   print(wang);
+  wang.eating(); wang.walking();
+
+  var clown = new badut("alif", "jawa");
+  print(clown);
+
+  var tvswasta = new acaraTV("Sketsa", "Jakarta");
+  tvswasta.laughing();
 }
