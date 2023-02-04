@@ -67,4 +67,7 @@ void main(List<String> arguments) {
 
   var tvswasta = new acaraTV("Sketsa", "Jakarta");
   tvswasta.laughing();
+
+  var dimyadi = new person("dimyadi anak shalih", "jawa");
+  print(dimyadi);
 }
